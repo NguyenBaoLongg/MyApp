@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:background="@color/white">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_edit_product"
+            android:layout_marginTop="30dp"
+            android:text="Chỉnh sửa sản phẩm"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_name_product"
+            android:layout_below="@id/textView_edit_product"
+            android:text="Tên sản phẩm"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="30dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtName"
+            android:hint="Nhập tên sản phẩm"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:layout_below="@id/textView_name_product"
+            android:background="@drawable/border_register"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_price_product"
+            android:layout_below="@id/edtName"
+            android:text="Giá"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="30dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtPrice"
+            android:hint="Nhập giá sản phẩm"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:layout_below="@id/textView_price_product"
+            android:background="@drawable/border_register"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_img_product"
+            android:layout_below="@id/edtPrice"
+            android:text="Ảnh"
+            android:textColor="#555555"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtImage"
+            android:hint="Nhập link ảnh"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:layout_below="@id/textView_img_product"
+            android:background="@drawable/border_register"
+            />
+
+        <RelativeLayout
+            android:id="@+id/RL_Classify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtImage"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_register">
+
+            <TextView
+                android:id="@+id/textView_classify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:layout_marginStart="35dp"
+                android:text="Phân loại" />
+
+            <View
+                android:id="@+id/divider_classify"
+                android:layout_width="250dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/textView_classify"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/darker_gray" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_classify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_classify"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <RadioButton
+                    android:id="@+id/radio_PL1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/purple_500"
+                    android:text="PL1"
+                    android:textColor="#555555"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_PL2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:buttonTint="@color/purple_500"
+                    android:text="PL2"
+                    android:textColor="#555555"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_PL3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/purple_500"
+                    android:text="PL3"
+                    android:layout_marginStart="5dp"
+                    android:textColor="#555555"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_PL4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:buttonTint="@color/purple_500"
+                    android:text="PL4"
+                    android:textColor="#555555"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEdit"
+            android:text="Chỉnh sửa"
+            android:textAllCaps="true"
+            android:layout_below="@+id/RL_Classify"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/PrimaryColor"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
